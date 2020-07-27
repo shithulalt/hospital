@@ -2,9 +2,11 @@
 # only for three people
 
 
-import datetime      #date and time
+import datetime     #date and time
+import pprint
 def gettime():
-    return datetime.datetime.now()
+    x=datetime.datetime.now()
+    return x.strftime("%Y-%m-%d %H:%M:%S")
 def take(k):         #function for taking data
     if k==1:
         c=int(input("enter 1 for excersise and 2 for food"))
@@ -77,8 +79,8 @@ def retrieve(k):
                     print(i, end="")
     else:
         print("plz enter valid input (harry,rohan,hammad)")
-print("health management system: ")
-a=int(input("press 1 for lock the value and 2 for retrieve "))
+print("fitness management system: ")
+a=int(input("press 1 for adding the data and 2 for retrieveing \n"))
 
 if a==1:
     b = int(input("press 1 for harry 2 for rohan 3 for hammad "))
